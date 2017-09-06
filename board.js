@@ -2,7 +2,7 @@ class Board {
   constructor() {
     this.grid = [];
     for (var i = 0; i < 4; i++) {
-      this.grid.push(new Array(4))
+      this.grid.push([0, 0, 0, 0]);
     }
 
     this.setupBoard();
@@ -30,16 +30,18 @@ class Board {
   }
 
   gameOver() {
+    let result = true;
     this.grid.forEach( (row) => {
       row.forEach( (space) => {
-        if (space === undefined) {
-          return false;
+        if (space === 0) {
+          result = false;
         }
       });
     });
-
-    return true;
+    return result;
   }
+
+
 }
 
 export default Board;
