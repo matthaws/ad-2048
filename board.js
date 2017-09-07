@@ -41,7 +41,53 @@ class Board {
     return result;
   }
 
+  move(direction) {
+    const newGrid = [];
+    switch(direction) {
+      case 'right':
+        this.grid.forEach((row) => {
+          newGrid.push(this.compact(row));
+        });
+        this.grid = newGrid;
+        break;
+      case 'left':
+        this.grid.forEach((row) => {
+          newGrid.push(this.compact(row.reverse()).reverse());
+        });
+        this.grid = newGrid;
+        break;
+      case 'up':
+        
+        break;
+      case 'down':
+
+        break;
+    }
+
+    this.newNumber();
+  }
+
+  compact(array) {
+    let flag = true;
+    const row = array.slice(0);
+    let count;
+    while (flag) {
+      flag = false;
+      count = 2;
+      while (count > -1) {
+        if (row[count] === row[count + 1] && row[count] > 0) {
+          row[count] = 0;
+          row[count+1] = row[count + 1] * 2
+          flag = true;
+        } else if (row[count+1] === 0 && row[count] > 0) {
+          row[count+1] = row[count];
+          row[count] = 0
+          flag = true;
+        }
+        count = count - 1
+      }
+    }
+  return row;
+  }
 
 }
-
-export default Board;
