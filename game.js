@@ -1,11 +1,9 @@
 import Board from './board';
 
-class Game {
-  constructor() {
+class GameView {
+  constructor($el) {
     this.board = new Board;
+    this.$el = $el;
   }
 
-  playRound() {
-    
-  }
 }
