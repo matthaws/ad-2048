@@ -1,3 +1,5 @@
+const _ = require('./node_modules/underscore/underscore.js')
+
 class Board {
   constructor() {
     this.grid = [];
@@ -42,7 +44,8 @@ class Board {
   }
 
   move(direction) {
-    const newGrid = [];
+    let newGrid = [];
+    let zippedGrid;
     switch(direction) {
       case 'right':
         this.grid.forEach((row) => {
@@ -57,14 +60,22 @@ class Board {
         this.grid = newGrid;
         break;
       case 'up':
-        
+        zippedGrid = _.zip(...this.grid);
+        zippedGrid.forEach((row) => {
+          newGrid.push(this.compact(row.reverse()).reverse())
+        })
+        this.grid = _.unzip(newGrid);
         break;
       case 'down':
-
+        zippedGrid = _.zip(...this.grid);
+        zippedGrid.forEach((row) => {
+          newGrid.push(this.compact(row));
+        })
+        this.grid = _.unzip(newGrid);
         break;
     }
 
-    this.newNumber();
+    // this.newNumber();
   }
 
   compact(array) {
