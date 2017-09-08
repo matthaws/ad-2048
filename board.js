@@ -1,4 +1,4 @@
-const _ = require('./node_modules/underscore/underscore.js')
+// const _ = require('./node_modules/underscore/underscore.js')
 
 class Board {
   constructor() {
@@ -75,7 +75,7 @@ class Board {
         break;
     }
 
-    // this.newNumber();
+    this.newNumber();
   }
 
   compact(array) {
