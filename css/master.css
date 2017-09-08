@@ -1,0 +1,17 @@
+ul, li, ol {
+  list-style: none;
+}
+
+#game {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.row li {
+  padding: 80px;
+  border: 2px solid black;
+  }

@@ -1,5 +1,6 @@
-import Game from './game';
+import GameView from './game';
 
 $(() => {
-  const game = new
+  const $el = $('#game');
+  const game = new GameView($el);
 })
