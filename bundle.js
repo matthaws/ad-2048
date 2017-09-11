@@ -146,7 +146,7 @@ var GameView = function () {
         $row.empty();
         this.board.grid[i].forEach(function (square) {
           if (square > 0) {
-            $square = $('<li>' + square + '</li>');
+            $square = $('<li><p>' + square + '</p></li>');
           } else {
             $square = $('<li></li>');
           }
