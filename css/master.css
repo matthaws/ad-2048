@@ -2,6 +2,20 @@ ul, li, ol {
   list-style: none;
 }
 
+body {
+  background: url('../assets/background.gif');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Frijole', cursive;
+  font-size: 88px;
+  text-align: center;
+  color: grey;
+}
+
 #game {
   width: 700px;
   margin: 0 auto;
@@ -9,9 +23,13 @@ ul, li, ol {
 
 .row {
   display: flex;
+  padding: 20px;
 }
 
 .row li {
   padding: 80px;
-  border: 2px solid black;
+  margin-right: 20px;
+  border: 2px solid grey;
+  border-radius: 8px;
+  background-color: lightgrey;
   }

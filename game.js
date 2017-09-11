@@ -32,7 +32,7 @@ class GameView {
   render() {
     let $row, $square;
     for (let i = 0; i < this.board.grid.length; i++) {
-      $row = $(`#row${i}`);
+      $row = $(`#row${i + 1}`);
       $row.empty();
       this.board.grid[i].forEach((square) => {
         if (square > 0) {
