@@ -44,6 +44,7 @@ class Board {
   }
 
   move(direction) {
+    const oldGrid = this.grid;
     let newGrid = [];
     let zippedGrid;
     switch(direction) {
@@ -75,7 +76,20 @@ class Board {
         break;
     }
 
-    this.newNumber();
+    if (this.sameGrid(oldGrid, this.grid)) {
+      this.newNumber();
+    }
+  }
+
+  sameGrid(oldGrid, newGrid) {
+    oldGrid.forEach((row, idx) => {
+      row.forEach((space, idx2) => {
+        if (newGrid[idx][idx2] !== space) {
+          return false;
+        }
+      });
+    });
+    return true;
   }
 
   compact(array) {

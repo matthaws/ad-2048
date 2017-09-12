@@ -36,7 +36,7 @@ class GameView {
       $row.empty();
       this.board.grid[i].forEach((square) => {
         if (square > 0) {
-          $square = $(`<li><p>${square}</p></li>`)
+          $square = $(`<li class="image-${square}"><p>${square}</p></li>`)
         } else {
           $square = $('<li></li>');
         }

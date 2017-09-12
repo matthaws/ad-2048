@@ -146,7 +146,7 @@ var GameView = function () {
         $row.empty();
         this.board.grid[i].forEach(function (square) {
           if (square > 0) {
-            $square = $('<li><p>' + square + '</p></li>');
+            $square = $('<li class="image-' + square + '"><p>' + square + '</p></li>');
           } else {
             $square = $('<li></li>');
           }
@@ -251,6 +251,7 @@ var Board = function () {
           _ref,
           _ref2;
 
+      var oldGrid = this.grid;
       var newGrid = [];
       var zippedGrid = void 0;
       switch (direction) {
@@ -282,7 +283,21 @@ var Board = function () {
           break;
       }
 
-      this.newNumber();
+      if (this.sameGrid(oldGrid, this.grid)) {
+        this.newNumber();
+      }
+    }
+  }, {
+    key: 'sameGrid',
+    value: function sameGrid(oldGrid, newGrid) {
+      oldGrid.forEach(function (row, idx) {
+        row.forEach(function (space, idx2) {
+          if (newGrid[idx][idx2] !== space) {
+            return false;
+          }
+        });
+      });
+      return true;
     }
   }, {
     key: 'compact',

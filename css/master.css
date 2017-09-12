@@ -32,9 +32,44 @@ h1 {
   margin-right: 20px;
   border: 2px solid grey;
   border-radius: 8px;
-  background-color: lightgrey;
+  background-color: white;
   }
 
+.image-2 {
+  background-image: url('../assets/2.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.image-4 {
+  background-image: url('../assets/4.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.image-8 {
+  background-image: url('../assets/8.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+ .image-16 {
+   background-image: url('../assets/16.jpg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right;
+ }
+
+ .image-32 {
+   background-image: url('../assets/32.jpg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right;
+ }
+ 
 p {
   position: absolute;
   top: 0;
