@@ -13,7 +13,9 @@ h1 {
   font-family: 'Frijole', cursive;
   font-size: 88px;
   text-align: center;
-  color: grey;
+   background: -webkit-linear-gradient(#eee, #333);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
 #game {
@@ -69,7 +71,49 @@ h1 {
    background-size: contain;
    background-position: right;
  }
- 
+
+ .image-64 {
+   background-image: url('../assets/64.jpg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right;
+ }
+
+ .image-128 {
+   background-image: url('../assets/128.jpg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right;
+ }
+
+ .image-256 {
+   background-image: url('../assets/256.jpg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right;
+ }
+
+ .image-512 {
+   background-image: url('../assets/512.jpg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right;
+ }
+
+ .image-1024 {
+   background-image: url('../assets/1024.jpg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right;
+ }
+
+ .image-2048 {
+   background-image: url('../assets/2048.jpg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right;
+ }
+
 p {
   position: absolute;
   top: 0;
