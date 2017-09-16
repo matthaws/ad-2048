@@ -5,6 +5,7 @@ class GameView {
     this.board = new Board;
     this.setListeners();
     this.render();
+    this.sound = $('#sound');
   }
 
   setListeners() {

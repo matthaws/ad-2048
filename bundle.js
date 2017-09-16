@@ -77,8 +77,15 @@ var _game2 = _interopRequireDefault(_game);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
-  var $el = $('#game');
-  var game = new _game2.default($el);
+  var game = new _game2.default();
+  var sound = $('#sound');
+  var toggleMute = function toggleMute() {
+    if (sound.muted) {
+      sound.muted = false;
+    } else {
+      sound.muted = true;
+    }
+  };
 });
 
 /***/ }),
@@ -109,6 +116,7 @@ var GameView = function () {
     this.board = new _board2.default();
     this.setListeners();
     this.render();
+    this.sound = $('#sound');
   }
 
   _createClass(GameView, [{
