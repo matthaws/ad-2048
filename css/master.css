@@ -21,6 +21,16 @@ h1 {
 #game {
   width: 700px;
   margin: 0 auto;
+  position: relative;
+}
+
+#sound {
+  display: inline-block;
+  background: -webkit-linear-gradient(#eee, #333);
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  cursor: pointer;
 }
 
 .row {

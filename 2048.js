@@ -3,11 +3,11 @@ import GameView from './game';
 $(() => {
   const game = new GameView();
   const sound = $('#sound');
-  const toggleMute = () => {
-    if (sound.muted) {
-      sound.muted = false;
+  window.toggleMute = () => {
+    if (sound[0].muted) {
+      sound[0].muted = false;
     } else {
-      sound.muted = true;
+      sound[0].muted = true;
     }
   }
 })

@@ -79,11 +79,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 $(function () {
   var game = new _game2.default();
   var sound = $('#sound');
-  var toggleMute = function toggleMute() {
-    if (sound.muted) {
-      sound.muted = false;
+  window.toggleMute = function () {
+    if (sound[0].muted) {
+      sound[0].muted = false;
     } else {
-      sound.muted = true;
+      sound[0].muted = true;
     }
   };
 });
