@@ -76,20 +76,21 @@ class Board {
         break;
     }
 
-    if (this.sameGrid(oldGrid, this.grid)) {
+    if (!this.sameGrid(oldGrid, this.grid)) {
       this.newNumber();
     }
   }
 
   sameGrid(oldGrid, newGrid) {
+    let flag = true;
     oldGrid.forEach((row, idx) => {
       row.forEach((space, idx2) => {
         if (newGrid[idx][idx2] !== space) {
-          return false;
+          flag = false;
         }
       });
     });
-    return true;
+    return flag;
   }
 
   compact(array) {

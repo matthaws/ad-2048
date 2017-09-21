@@ -291,21 +291,22 @@ var Board = function () {
           break;
       }
 
-      if (this.sameGrid(oldGrid, this.grid)) {
+      if (!this.sameGrid(oldGrid, this.grid)) {
         this.newNumber();
       }
     }
   }, {
     key: 'sameGrid',
     value: function sameGrid(oldGrid, newGrid) {
+      var flag = true;
       oldGrid.forEach(function (row, idx) {
         row.forEach(function (space, idx2) {
           if (newGrid[idx][idx2] !== space) {
-            return false;
+            flag = false;
           }
         });
       });
-      return true;
+      return flag;
     }
   }, {
     key: 'compact',
