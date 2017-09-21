@@ -147,6 +147,21 @@ var GameView = function () {
   }, {
     key: 'render',
     value: function render() {
+      var ranks = {
+        2: "Puny Human",
+        4: "Less Puny Human",
+        8: "Mutating Human",
+        16: "Minor Mutant",
+        32: "Mutant Warrior",
+        64: "Mutant Lord",
+        128: "Dark Spectre",
+        256: "Dark Archbishop",
+        512: "Dark Knight",
+        1024: "Son of Darkness",
+        2048: "Lord of Darkness and God of the Apocalypse"
+      };
+
+      var highest = 0;
       var $row = void 0,
           $square = void 0;
       for (var i = 0; i < this.board.grid.length; i++) {
@@ -159,8 +174,14 @@ var GameView = function () {
             $square = $('<li></li>');
           }
           $row.append($square);
+          if (square > highest) {
+            highest = square;
+          }
         });
       }
+      $('#score').empty();
+      $('#score').append('<h3>' + ranks[highest] + '</h3>');
+      $('#score').append('<div class="image-' + highest + '"></div>');
     }
   }]);
 
