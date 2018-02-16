@@ -1,4 +1,4 @@
-const _ = require('./node_modules/underscore/underscore.js')
+const _ = require('./vendor/underscore.js')
 
 class Board {
   constructor() {
